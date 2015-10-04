@@ -3,6 +3,12 @@ package se.idioti.example.sqlite;
 import java.sql.Timestamp;
 import java.util.List;
 
+/**
+ * This example showcases how the storage can be used.
+ * 
+ * @author "Johan Holmberg, Malmö university"
+ * @since 1.0
+ */
 public class ExampleRunner {
 
 	public static void main(String[] args) throws ClassNotFoundException {
