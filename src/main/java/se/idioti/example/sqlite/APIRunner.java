@@ -20,23 +20,8 @@ public class APIRunner {
 		storage.setup();
 		
 		// A demonstration of how to use code within an endpoint
-		get("/unicorns", (req, res) -> {
-			List<Unicorn> unicorns = storage.fetchUnicorns();
-			String output = "";
-			
-			for (Unicorn unicorn : unicorns) {
-				output += unicorn.name + "\n";
-			}
-			
-			return output;
-		});
-		
-		// A demonstration of how to use code within an endpoint
-		get("/unicorn/:id", (req, res) -> {
-			int id = Integer.parseInt(req.params(":id"));
-			Unicorn unicorn = storage.fetchUnicorn(id);
-			
-			return unicorn.name;
+		get("/", (req, res) -> {
+			return "Hello world";
 		});
 	}
 
