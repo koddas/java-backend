@@ -14,7 +14,7 @@ import java.util.List;
 public class APIRunner {
 
 	public static void main(String[] args) throws Exception {
-		port(8080);
+		port(5000);
 		
 		Storage storage = new Storage();
 		storage.setup();
