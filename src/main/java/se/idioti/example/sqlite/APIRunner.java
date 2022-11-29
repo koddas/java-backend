@@ -1,9 +1,8 @@
 package se.idioti.example.sqlite;
 
-import static spark.Spark.get;
-import static spark.Spark.port;
-
-import java.util.List;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import io.javalin.Javalin;
 
 /**
  * This demonstrates how to expose the storage through a REST API using Spark.
@@ -13,16 +12,27 @@ import java.util.List;
  */
 public class APIRunner {
 
+	private Storage storage = null;
+	private Gson gson = null;
+
+	public APIRunner() {
+		try {
+			storage = new Storage();
+			storage.setup();
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+
+		// Set a decent date format
+		gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+	}
+
 	public static void main(String[] args) throws Exception {
-		port(5000);
-		
-		Storage storage = new Storage();
-		storage.setup();
-		
-		// A demonstration of how to use code within an endpoint
-		get("/", (req, res) -> {
-			return "Hello world";
-		});
+		APIRunner runner = new APIRunner();Javalin app = Javalin.create(config -> {})
+				// A demonstration of how to use code within an endpoint
+				.get("/", ctx -> { ctx.html("Hello, World!"); })
+				// Run the server on port 5000
+				.start(5000);
 	}
 
 }

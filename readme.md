@@ -4,8 +4,8 @@ This project is a simple example of a Java application accessing a SQLite
 database. There is ABSOLUTELY NO WAY you should run this in a real project, as
 it is really, really insecure. Just don't do it. Learn from it, but that's all.
 
-The later versions (from 1.1.0) also showcase how to expose the database as a
-REST API using the Spark framework. Thus, Java 8 or later is required.
+The later versions (from 2.0.0) also showcase how to expose the database as a
+REST API using the Javalin framework. Thus, Java 8 or later is required.
 
 # How do I build this project?
 
@@ -20,8 +20,8 @@ Navigate to your project location. Then, simply type
     mvn package
 
 in your terminal. Your generated JAR files can be found as
-*./target/java-backend-1.1.0.jar* and
-*./target/java-backend-1.1.0-jar-with-dependencies.jar*.
+*./target/java-backend-2.0.0.jar* and
+*./target/java-backend-2.0.0-jar-with-dependencies.jar*.
 
 # How do I run this project?
 
@@ -29,7 +29,7 @@ The easiest way of running the code is directly from within your IDE of choice,
 simply by hitting the *Run* button (in Eclipse, that is). If you prefer running
 your code from the command line, navigate to the project location and type
 
-    java -jar target/java-backend-1.1.0-jar-with-dependencies.jar
+    java -jar target/java-backend-2.0.0-jar-with-dependencies.jar
 
 Don't forget to kill the process when done (using the stop button in the
 Eclipse console, or by hitting ctrl-c in the terminal).
