@@ -28,7 +28,8 @@ public class APIRunner {
 	}
 
 	public static void main(String[] args) throws Exception {
-		APIRunner runner = new APIRunner();Javalin app = Javalin.create(config -> {})
+		APIRunner runner = new APIRunner();
+		Javalin app = Javalin.create(config -> {})
 				// A demonstration of how to use code within an endpoint
 				.get("/", ctx -> { ctx.html("Hello, World!"); })
 				// Run the server on port 5000
