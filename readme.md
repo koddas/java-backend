@@ -5,7 +5,7 @@ database. There is ABSOLUTELY NO WAY you should run this in a real project, as
 it is really, really insecure. Just don't do it. Learn from it, but that's all.
 
 The later versions (from 2.0.0) also showcase how to expose the database as a
-REST API using the Javalin framework. Thus, Java 8 or later is required.
+REST API using the Javalin framework. Thus, Java 11 or later is required.
 
 # How do I build this project?
 
