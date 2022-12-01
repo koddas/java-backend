@@ -31,9 +31,13 @@ public class APIRunner {
 		APIRunner runner = new APIRunner();
 		Javalin app = Javalin.create(config -> {})
 				// A demonstration of how to use code within an endpoint
-				.get("/", ctx -> { ctx.html("Hello, World!"); })
+				.get("/", ctx -> { ctx.json("Hello, Obed!"); })
 				// Run the server on port 5000
 				.start(5000);
+
+
 	}
+
+
 
 }
